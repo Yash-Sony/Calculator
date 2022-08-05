@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Calculator.css">
+</head>
+
+<body>
+    <div class="container-fluid bg-dark">
+        <div class="border">
+            <h1 class="title border">Calculator</h1>
+            <div class="display d-flex flex-column text-center">
+                <div class="d-flex flex-row justify-content-center">
+                    <input type="text" class="user-input mt-2 mb-2 bg-light" id="numberA" />
+                    <input type="text" class="user-input mt-2 mb-2 bg-light" style="font-size:30px; font-weight:bold" id="signGiven" />
+                    <input type="text" class="user-input mt-2 mb-2 bg-light" id="numberB" />
+                </div>
+                <div class="text-center m-2">
+                    <span class="col-12 ans">---- Your Answer ----</span>
+                </div>
+                <div class="d-flex fliex-row justify-content-center">
+                    <input type="text" class="user-result m-2 bg-light" id="giveResult" />
+                </div>
+            </div>
+            <div class="keys text-center border">
+                <div class="d-flex flex-row justify-content-center">
+                    <button class="button button1 shadow" style="font-size:16px" onclick="reSet()">AC</button>
+                    <button class="button button1 shadow" onclick="addPop()">&lt;</button>
+                    <button class="button button1 shadow" style="font-size:25px" onclick="addModulse()">%</button>
+                    <button class="button shadow" style="padding:10px 23px 10px 22px" onclick="addResto()">^</button>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <button class="button shadow" onclick="add1()">1</button>
+                    <button class="button shadow" onclick="add2()">2</button>
+                    <button class="button shadow" onclick="add3()">3</button>
+                    <button class="button shadow" onclick="addAdd()">+</button>
+
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <button class="button shadow" onclick="add4()">4</button>
+                    <button class="button shadow" onclick="add5()">5</button>
+                    <button class="button shadow" onclick="add6()">6</button>
+                    <button class="button shadow" onclick="addMinus()">-</button>
+
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <button class="button shadow" onclick="add7()">7</button>
+                    <button class="button shadow" onclick="add8()">8</button>
+                    <button class="button shadow" onclick="add9()">9</button>
+                    <button class="button shadow" onclick="addMulti()">X</button>
+
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <button class="button shadow" onclick="giveResult()">=</button>
+                    <button class="button shadow" onclick="add0()">0</button>
+                    <button class="button shadow" style="padding:10px 25px 10px 25px" onclick="addPoint()">.</button>
+                    <button class="button shadow" style="padding:10px 25px 10px 25px" onclick="addDivide()">/</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+    <script src="Calculator.js"></script>
+</body>
+
+</html>
